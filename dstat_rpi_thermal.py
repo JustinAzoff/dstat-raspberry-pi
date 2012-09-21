@@ -9,7 +9,7 @@ class dstat_plugin(dstat):
         self.scale = 5
         self.vars = self.nick = ['temp']
         if not os.path.exists(self.TEMP_FILE):
-                raise Exception, 'Needs newer Raspberry Pi firmware'
+            raise Exception, 'Needs newer Raspberry Pi firmware'
 
     def extract(self):
         with open(self.TEMP_FILE) as f:
